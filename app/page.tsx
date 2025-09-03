@@ -4,6 +4,7 @@ import { Search, UserPlus, LogIn } from 'lucide-react'
 const Page = () => {
   return (
     <>
+    {/* Hero Section */}
       <section className = "pt-32 pb-16 px-4" >
         <div className="container mx-auto text-center">
           <h2 className="text-5xl font-bold text-black mb-6">
