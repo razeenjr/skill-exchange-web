@@ -1,32 +1,26 @@
 // components/Navbar.js
 import Link from 'next/link';
+import { LogIn, UserPlus } from 'lucide-react';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold text-blue-600">
-            <Link href="/">SkillExchange</Link>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex space-x-4">
-            <Link href="/login">
-              <button className="text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-50 transition">
-                Login
-              </button>
-            </Link>
-            <Link href="/signup">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                Sign Up
-              </button>
-            </Link>
+      <nav className="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            SkillExchange
+          </h1>
+          <div className="flex gap-4">
+            <button className="px-4 py-2 text-gray-600 hover:text-gray-900 flex items-center gap-2">
+              <LogIn size={20} />
+              Login
+            </button>
+            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2">
+              <UserPlus size={20} />
+              Sign Up
+            </button>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
   );
 };
 
